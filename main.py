@@ -2,10 +2,10 @@ import os
 os.system('python3 scrap.py')    
 with open("requirements.txt","r") as f:
   for i in f.readlines():
-    try:	
-    	 os.system(i)
+    try:
+        os.system(i)
     except:
-		   pass
+        pass
 # import os
 import os
 import nltk
@@ -605,26 +605,14 @@ os.system("ffmpeg -i new_main.mp4 -vf scale=1920:1080 new_main1.mp4")
 os.system("ffmpeg -f concat -safe 0 -i list.txt -c copy final_upload.mp4 ")
 os.system("ffmpeg -f concat -safe 0 -i new_list.txt -c copy new_final_upload.mp4 ")
 os.chdir(origianl_direectory+"/youtube_last uploads/")
-try:
-  os.remove("data.csv")
-except:
-    pass  
-try:
-  os.remove("thumb1.jpg")
-except:
-    pass
-try:
-  os.remove("thumb2.jpg")
-except:
-    pass
-try:
-  os.remove("video1.mp4")
-except:
-    pass
-try:
-  os.remove("video2.mp4")
-except:
-    pass
+# try:
+# os.remove("data.csv")
+os.remove("thumb1.jpg")
+os.remove("thumb2.jpg")
+os.remove("video1.mp4")
+os.remove("video2.mp4")
+# except:
+#     pass
 os.chdir(origianl_direectory+"/news/video/")
 shutil.move(origianl_direectory+"/news/video/thumb1.jpg",origianl_direectory+"/youtube_last uploads/")
 shutil.move(origianl_direectory+"/news/video/thumb2.jpg",origianl_direectory+"/youtube_last uploads/")
@@ -757,3 +745,100 @@ with open ("tag_title(2).txt","w") as f:
   f.write(description_for_upload+"\n \n")
   for i in tag2:
     f.write(i+",")  
+
+os.system("python3 Google.py")
+
+#@title ##**Upload video1** { display-mode: "form" }
+
+import datetime
+from Google import Create_Service
+from googleapiclient.http import MediaFileUpload
+
+CLIENT_SECRET_FILE = 'client_secret.json'
+API_NAME = 'youtube'
+API_VERSION = 'v3'
+SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
+
+service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+now = datetime.datetime.now()
+now_plus_10 = now + datetime.timedelta(minutes = 15)
+add10=now_plus_10.replace(microsecond=0)
+upload_date_time = add10.isoformat() + '.000Z'
+
+# upload_date_time = datetime.datetime(2020, 12, 25, 12, 30, 0).isoformat() + '.000Z'
+
+request_body = {
+    'snippet': {
+        'categoryI': 28,
+        'title': ti_1,
+        'description': description_for_upload,
+        'tags': tag1
+    },
+    'status': {
+        'privacyStatus': 'private',
+        'publishAt': upload_date_time,
+        'selfDeclaredMadeForKids': False, 
+    },
+    'notifySubscribers': False
+}
+
+mediaFile = MediaFileUpload('video1.mp4')
+
+response_upload = service.videos().insert(
+    part='snippet,status',
+    body=request_body,
+    media_body=mediaFile
+).execute()
+
+
+service.thumbnails().set(
+    videoId=response_upload.get('id'),
+    media_body=MediaFileUpload('thumb1.jpg')
+).execute()
+
+#@title ##**Upload video2** { display-mode: "form" }
+import datetime
+from Google import Create_Service
+from googleapiclient.http import MediaFileUpload
+
+CLIENT_SECRET_FILE = 'client_secret.json'
+API_NAME = 'youtube'
+API_VERSION = 'v3'
+SCOPES = ['https://www.googleapis.com/auth/youtube.upload']
+
+service = Create_Service(CLIENT_SECRET_FILE, API_NAME, API_VERSION, SCOPES)
+now = datetime.datetime.now()
+now_plus_10 = now + datetime.timedelta(minutes = 300)
+add10=now_plus_10.replace(microsecond=0)
+upload_date_time = add10.isoformat() + '.000Z'
+
+# upload_date_time = datetime.datetime(2020, 12, 25, 12, 30, 0).isoformat() + '.000Z'
+
+request_body = {
+    'snippet': {
+        'categoryI': 28,
+        'title': ti_2,
+        'description': description_for_upload,
+        'tags': tag2
+    },
+    'status': {
+        'privacyStatus': 'private',
+        'publishAt': upload_date_time,
+        'selfDeclaredMadeForKids': False, 
+    },
+    'notifySubscribers': False
+}
+
+mediaFile = MediaFileUpload('video2.mp4')
+
+response_upload = service.videos().insert(
+    part='snippet,status',
+    body=request_body,
+    media_body=mediaFile
+).execute()
+
+
+service.thumbnails().set(
+    videoId=response_upload.get('id'),
+    media_body=MediaFileUpload('thumb2.jpg')
+).execute()
