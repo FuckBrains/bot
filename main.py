@@ -157,7 +157,7 @@ descriptions=new_descriptions
 
 #start
 if len(titles)<=7:
-    break
+    quit()
 
 #end
 
