@@ -5,7 +5,7 @@ with open("requirements.txt","r") as f:
     try:	
     	os.system(i)
     except:
-	pass
+		pass
 # import os
 import os
 import nltk
