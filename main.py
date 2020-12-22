@@ -1,14 +1,36 @@
 import os
-# os.system('python3 scrap.py')    
-# with open("command.txt","r") as f:
-#   for i in f.readlines():
-#     os.system(i)
+os.system('python3 scrap.py')    
+with open("command.txt","r") as f:
+  for i in f.readlines():
+    os.system(i)
 # import os
 import os
 import nltk
 import spacy
 import nltk
 origianl_direectory=os.getcwd()
+try:
+	os.mkdir("news")
+except:
+	pass
+os.chdir(origianl_direectory+"/news/")
+try:
+	os.mkdir("video")
+except:
+	pass	
+try:	
+	os.mkdir("audio")
+except:
+	pass
+try:
+	os.mkdir("images")
+except:
+	pass	
+try:	
+	os.mkdir("csv")
+except:
+	pass
+os.chdir(origianl_direectory)
 with open("titles.txt","r") as f:
   titl_backup=f.readlines()    
 titl_backup=str(titl_backup).split("^^^^")  
