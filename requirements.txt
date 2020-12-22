@@ -24,3 +24,4 @@ sudo apt install ffmpeg
 pip3 install rake-nltk
 pip3 install pandas
 pip3 install apscheduler
+pip install google-api-python-client
