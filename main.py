@@ -3,7 +3,7 @@ os.system('python3 scrap.py')
 with open("requirements.txt","r") as f:
   for i in f.readlines():
     try:	
-    	os.system(i)
+    	 os.system(i)
     except:
 		   pass
 # import os
