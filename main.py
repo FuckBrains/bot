@@ -1,8 +1,11 @@
 import os
 os.system('python3 scrap.py')    
-with open("command.txt","r") as f:
+with open("requirements.txt","r") as f:
   for i in f.readlines():
-    os.system(i)
+    try:	
+    	os.system(i)
+    except:
+	pass
 # import os
 import os
 import nltk
