@@ -1,5 +1,6 @@
 from keep_alive import keep_alive
 import os
+os.system("pip3 install apscheduler==2.1.2")
 import csv
 curr_dir=os.getcwd()
 import apscheduler
