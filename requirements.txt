@@ -23,5 +23,5 @@ sudo apt-get install libav-tools
 sudo apt install ffmpeg
 pip3 install rake-nltk
 pip3 install pandas
-pip3 install apscheduler
-pip install google-api-python-client
+pip install apscheduler==2.1.2
+pip3 install google-api-python-client
