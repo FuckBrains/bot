@@ -12,6 +12,6 @@ We are using YouTube Data API (v3) to upload our video in youtube. Mind it youtu
 | FlowChart 1      | FlowChart  2      |
 |------------|-------------|
 | <img src="https://github.com/bmox/bot/blob/main/youtube_last%20uploads/flow_char1.png" width="600"> | <img src="https://github.com/bmox/bot/blob/main/youtube_last%20uploads/flow_chart2.png" width="600"> |
-## Click on the image to watch the demo on youtube
+## Click on the image to watch the demo video on youtube
  [![Watch the video](https://i.ytimg.com/vi/lIsj6j_mfzU/hqdefault.jpg)](https://youtu.be/lIsj6j_mfzU)
 
