@@ -4,6 +4,9 @@ This python script can create tech news video and upload directly to your youtub
 ## If you want to create a tech news channel on youtube what you do?<br>
 Collect news from online then some images then voice over. After that you will create intro outro and edit your final video. Then you need to manually upload a video in youtube and give title, tag, description and thumbnails.To do this thing every day you waste minimum 2 to 4 hours. IF we using this python script we save lot of time.
 
+| col 1      | col 2      |
+|------------|-------------|
+| <img src="https://github.com/bmox/bot/blob/main/youtube_last%20uploads/flow_char1.png" width="600"> | <img src="https://mk0jobadderjftub56m0.kinstacdn.com/wp-content/uploads/stackoverflow.com-300.jpg" width="600"> |
 ## Click on the image to watch the demo
  [![Watch the video](https://i.ytimg.com/vi/lIsj6j_mfzU/hqdefault.jpg)](https://youtu.be/lIsj6j_mfzU)
 
