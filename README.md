@@ -3,10 +3,12 @@ This python script can create tech news video and upload directly to your youtub
 <br>
 ## If you want to create a tech news channel on youtube what you do?<br>
 Collect news from online then some images then voice over. After that you will create intro outro and edit your final video. Then you need to manually upload a video in youtube and give title, tag, description and thumbnails.To do this thing every day you waste minimum 2 to 4 hours. IF we using this python script we save lot of time.
-
-| col 1      | col 2      |
+##  YouTube Data API (v3)<br>
+We are using YouTube Data API (v3) to upload our video in youtube. Mind it youtube make your video private locked. If you are not verify your project. I need to vaify my project from youtube. it take 6 day for me. To varify my project I  filled up a form to youtube and It required  my project documentation like some code, screenshot, my project id, client, location, full name etc. Now If I upload my video from YouTube Data API (v3), my video will be public not private locked.
+##  Flowchart<br>
+| FlowChart 1      | FlowChart  2      |
 |------------|-------------|
-| <img src="https://github.com/bmox/bot/blob/main/youtube_last%20uploads/flow_char1.png" width="600"> | <img src="https://mk0jobadderjftub56m0.kinstacdn.com/wp-content/uploads/stackoverflow.com-300.jpg" width="600"> |
+| <img src="https://github.com/bmox/bot/blob/main/youtube_last%20uploads/flow_char1.png" width="600"> | <img src="https://github.com/bmox/bot/blob/main/youtube_last%20uploads/flow_chart2.png" width="600"> |
 ## Click on the image to watch the demo
  [![Watch the video](https://i.ytimg.com/vi/lIsj6j_mfzU/hqdefault.jpg)](https://youtu.be/lIsj6j_mfzU)
 
